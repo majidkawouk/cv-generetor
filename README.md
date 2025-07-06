@@ -1,1 +1,1 @@
-[cv-generetor.vercel.app]
+
