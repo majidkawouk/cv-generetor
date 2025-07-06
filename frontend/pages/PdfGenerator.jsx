@@ -24,31 +24,27 @@ export default function ResumeBuilder() {
     leaderships: [],
   });
 
-  // Function to handle CV style selection
   const handleCv = (style) => {
     setCv(style);
   };
 
-  // Function to handle form input changes
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
-  // Function to handle changes in Experience fields
   const handleExperienceChange = (e, index) => {
     const updatedExperiences = [...formData.experiences];
     updatedExperiences[index][e.target.name] = e.target.value;
     setFormData({ ...formData, experiences: updatedExperiences });
   };
 
-  // Function to handle changes in Leadership fields
   const handleLeadershipChange = (e, index) => {
     const updatedLeaderships = [...formData.leaderships];
     updatedLeaderships[index][e.target.name] = e.target.value;
     setFormData({ ...formData, leaderships: updatedLeaderships });
   };
 
-  // Function to add a new experience field
   const addExperience = () => {
     setFormData({
       ...formData,
@@ -59,7 +55,6 @@ export default function ResumeBuilder() {
     });
   };
 
-  // Function to add a new leadership field
   const addLeadership = () => {
     setFormData({
       ...formData,
@@ -70,7 +65,6 @@ export default function ResumeBuilder() {
     });
   };
 
-  // Function to generate the PDF based on selected CV style
   const generatePDF = () => {
     const doc = new jsPDF();
     let yPos = 20;
