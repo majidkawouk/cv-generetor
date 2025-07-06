@@ -54,7 +54,7 @@ export default function ResumeBuilder() {
   };
 
   const generatePDF = () => {
-    // Your existing PDF generation logic
+
   };
 
   return (
