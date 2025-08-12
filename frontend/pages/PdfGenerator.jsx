@@ -5,7 +5,7 @@ import autoTable from 'jspdf-autotable';
 import Image from 'next/image';
 
 export default function ResumeBuilder() {
-  const [cv, setCv] = useState('cv1'); // State to track selected CV style
+  const [cv, setCv] = useState('cv1'); 
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -76,7 +76,7 @@ export default function ResumeBuilder() {
     };
 
     if (cv === 'cv1') {
-      // CV1 Style
+   
       doc.setFont('times', 'bold');
       doc.setFontSize(22);
       doc.text(formData.name || 'Your Name', 10, yPos);
@@ -177,7 +177,7 @@ export default function ResumeBuilder() {
     }
 
     if (cv === 'cv2') {
-      // CV2 Style (based on the second example you provided)
+      
       doc.setFont('times', 'bold');
       doc.setFontSize(16);
       doc.text(formData.name || 'Your Name', 10, yPos);
@@ -300,7 +300,7 @@ export default function ResumeBuilder() {
   </div>
 </div>
 
-       {/* Form Container */}
+       
        <div className="bg-white text-black rounded-xl shadow-xl p-6 mt-6 w-full max-w-2xl">
         <h2 className="text-xl font-bold text-center mb-4">Personal Information</h2>
         
@@ -325,7 +325,7 @@ export default function ResumeBuilder() {
         <input type="text" id="languages" placeholder="Programming Languages" value={formData.languages} onChange={handleChange} className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
         <input type="text" id="tools" placeholder="Tech/Tools" value={formData.tools} onChange={handleChange} className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 mt-2" />
 
-        {/* Add Experience Button */}
+      
         <h2 className="text-xl font-bold text-center mt-6 mb-4">Experience</h2>
         {formData.experiences.map((exp, index) => (
           <div key={index} className="grid grid-cols-2 gap-4 mt-4 p-2 border rounded-md">
